@@ -6,24 +6,21 @@ using System.Web.Mvc;
 
 namespace Gym.Controllers
 {
-    public class HomeController : Controller
+    public class GymController : Controller
     {
+        // GET: Gym
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Halls()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
