@@ -349,11 +349,13 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Gym\Index.cshtml" />
+    <Content Include="Views\Gym\Halls.cshtml" />
+    <Content Include="Views\Trainer\Index.cshtml" />
+    <Content Include="Views\Gym\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
-    <Folder Include="Views\Trainer\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
