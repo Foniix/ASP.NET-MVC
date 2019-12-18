@@ -11,23 +11,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="@Url.Action("Index", "Gym")"><img class="logo" src="~/Images/logo.png" alt="Logo" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <img class="menu-img" src="~/Images/menu.svg" alt="menu" />
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="@Url.Action("Index", "Gym")">Главная</a>
-                    <a class="nav-item nav-link" href="@Url.Action("Halls", "Gym")">Залы</a>
-                    <a class="nav-item nav-link" href="@Url.Action("Index", "Trainer")">Тренера</a>
-                    <a class="nav-item nav-link" href="@Url.Action("Contact", "Gym")">Контакты</a>
-                </div>
+        <a class="navbar-brand" href="@Url.Action("Index", "Gym")"><img class="logo" src="~/Images/logo.png" alt="Logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="menu-img" src="~/Images/menu.svg" alt="menu" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="@Url.Action("Index", "Gym")">Главная</a>
+                <a class="nav-item nav-link" href="@Url.Action("Halls", "Gym")">Залы</a>
+                <a class="nav-item nav-link" href="@Url.Action("Index", "Trainer")">Тренера</a>
+                <a class="nav-item nav-link" href="@Url.Action("Contact", "Gym")">Контакты</a>
+
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </nav>
     
-    <div class="container">
+    <div >
         @RenderBody()
         <hr />
         <footer>
