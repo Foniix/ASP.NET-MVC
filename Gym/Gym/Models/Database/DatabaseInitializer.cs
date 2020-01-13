@@ -86,6 +86,9 @@ namespace Gym.Models.Database
                     Name = "CrossFitHall",
                     Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     CounterOfClient = 20,
+                    Headin = "headingOne",
+                    Collapse = "collapseOne",
+                    Expanded = true,
                 },
                 new Hall(){
                     Id = 2,
@@ -93,6 +96,9 @@ namespace Gym.Models.Database
                     Name = "WaterHall",
                     Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     CounterOfClient = 20,
+                    Headin = "headingTwo",
+                    Collapse = "collapseTwo",
+                    Expanded = false,
                 },
                 new Hall(){
                     Id = 3,
@@ -100,6 +106,9 @@ namespace Gym.Models.Database
                     Name = "TrainingHall",
                     Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     CounterOfClient = 50,
+                    Headin = "headingThree",
+                    Collapse = "collapseThree",
+                    Expanded = false,
                 },
                 new Hall(){
                     Id = 4,
@@ -107,6 +116,9 @@ namespace Gym.Models.Database
                     Name = "StretchingHall",
                     Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     CounterOfClient = 10,
+                    Headin = "headingFour",
+                    Collapse = "collapseFour",
+                    Expanded = false,
                 },
             });
             context.SaveChanges();

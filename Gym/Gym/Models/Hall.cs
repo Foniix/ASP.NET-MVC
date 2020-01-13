@@ -7,6 +7,9 @@
         public string Image { get; set; }
         public string Descr { get; set; }
         public int CounterOfClient { get; set; }
-
+        //Style
+        public string Headin { get; set; }
+        public string Collapse { get; set; }
+        public bool Expanded { get; set; }
     }
 }
