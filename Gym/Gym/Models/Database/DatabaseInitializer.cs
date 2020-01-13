@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 
 namespace Gym.Models.Database
 {
@@ -10,7 +6,7 @@ namespace Gym.Models.Database
     {
         protected override void Seed(DatabaseContext context)
         {
-            context.Trainers.AddRange(new Trainer[] {
+            context.Trainers.AddRange(new[] {
                 new Trainer(){
                     Id = 1,
                     Image = "/Images/Trainer/t1.jpg",
@@ -83,6 +79,36 @@ namespace Gym.Models.Database
                 },
             });
 
+            context.Halls.AddRange(new[] {
+                new Hall(){
+                    Id = 1,
+                    Image = "/Images/Trainer/t1.jpg",
+                    Name = "CrossFitHall",
+                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    CounterOfClient = 20,
+                },
+                new Hall(){
+                    Id = 2,
+                    Image = "/Images/Trainer/t1.jpg",
+                    Name = "WaterHall",
+                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    CounterOfClient = 20,
+                },
+                new Hall(){
+                    Id = 3,
+                    Image = "/Images/Trainer/t1.jpg",
+                    Name = "TrainingHall",
+                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    CounterOfClient = 50,
+                },
+                new Hall(){
+                    Id = 4,
+                    Image = "/Images/Trainer/t1.jpg",
+                    Name = "StretchingHall",
+                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    CounterOfClient = 10,
+                },
+            });
             context.SaveChanges();
         }
     }

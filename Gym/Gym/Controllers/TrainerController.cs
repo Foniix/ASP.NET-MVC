@@ -1,6 +1,6 @@
-﻿using Gym.Models;
+﻿using System;
+using Gym.Models;
 using Gym.Models.Database;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace Gym.Controllers
 {
     public class TrainerController : Controller
     {
-        static List<Trainer> trainers = new List<Trainer>();
+        static List<Trainer> _trainers = new List<Trainer>();
         static TrainerController() {
             Database.SetInitializer(new DatabaseInitializer());
         }
@@ -21,9 +21,9 @@ namespace Gym.Controllers
         {
             using (DatabaseContext ctx = new DatabaseContext())
             {
-                trainers = ctx.Trainers.ToList();
+                _trainers = ctx.Trainers.ToList();
             }
-            ViewBag.Trainer = trainers;
+            ViewBag.Trainer = _trainers;
             return View();
         }
 
@@ -34,7 +34,7 @@ namespace Gym.Controllers
             {
                 return new HttpNotFoundResult();
             }
-            var trainer = trainers.FirstOrDefault(p => p.Id == id);
+            var trainer = _trainers.FirstOrDefault(p => p.Id == id);
             if (trainer is null)
             {
                 return new HttpNotFoundResult();
@@ -51,7 +51,7 @@ namespace Gym.Controllers
             {
                 return new HttpNotFoundResult();
             }
-            var trainer = trainers.FirstOrDefault(p => p.Id == id);
+            var trainer = _trainers.FirstOrDefault(p => p.Id == id);
             if (trainer is null)
             {
                 return new HttpNotFoundResult();
@@ -63,7 +63,7 @@ namespace Gym.Controllers
         [HttpPost]
         public ActionResult Edit(Trainer trainer, HttpPostedFileBase file)
         {
-            var editTrainer = trainers.FirstOrDefault(t => t.Id == trainer.Id);
+            var editTrainer = _trainers.FirstOrDefault(t => t.Id == trainer.Id);
             if (editTrainer != null)
             {
                 editTrainer.FirstName = trainer.FirstName;
@@ -111,16 +111,16 @@ namespace Gym.Controllers
             {
                 return new HttpNotFoundResult();
             }
-            var trainer = trainers.FirstOrDefault(p => p.Id == id);
+            var trainer = _trainers.FirstOrDefault(p => p.Id == id);
             if (trainer is null)
             {
                 return new HttpNotFoundResult();
             }
-            trainers.Remove(trainer);
+            _trainers.Remove(trainer);
             using (DatabaseContext ctx = new DatabaseContext())
             {
                 Trainer p = ctx.Trainers.Find(id);
-                ctx.Trainers.Remove(p);
+                ctx.Trainers.Remove(p ?? throw new InvalidOperationException()); // Check Exeptions!
                 ctx.SaveChanges();
             }
             return RedirectToAction("Index");
@@ -184,10 +184,10 @@ namespace Gym.Controllers
             string path = Server.MapPath($"~/Images/{file.FileName}");
             file.SaveAs(path);
 
-            var lastPerson = trainers.LastOrDefault();
+            var lastPerson = _trainers.LastOrDefault();
             trainer.Id = lastPerson is null ? 1 : lastPerson.Id + 1;
             trainer.Image = $"/Images/{file.FileName}";
-            trainers.Add(trainer);
+            _trainers.Add(trainer);
 
             using (DatabaseContext ctx = new DatabaseContext())
             {

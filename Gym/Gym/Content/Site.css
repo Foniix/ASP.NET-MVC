@@ -54,6 +54,9 @@ a {
     width: 100%;
     display:flex;
     flex-direction: column;
+    -ms-align-items:center;
+    -o-align-items:center;
+    -webkit-align-items:center;
     align-items:center;
     padding-bottom: 5%;
 }
@@ -76,7 +79,7 @@ a {
 }
 
 #carouselExampleCaptions {
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0 0 15px black;
 }
 
 .trainer-block {
@@ -89,7 +92,7 @@ a {
 .trainer-block-info {
     min-height: 1000px;
     background-color: #E84B0C;
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0 0 15px black;
 }
 
 .title-crossfit {
@@ -109,7 +112,7 @@ a {
 }
 
 .card {
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0 0 15px black;
     margin: 15px;
 }
 
@@ -130,6 +133,10 @@ a {
     flex-direction: column-reverse;
     background-color: white;
 }
+
+    .r-info img {
+        box-shadow: 0 0 15px black;
+    }
 
 .trainer-info-tittle {
     margin-top: 10px;
@@ -163,6 +170,7 @@ a {
 
 .descr {
     margin-bottom: 40px;
+    width: 100%
 }
 
 .trainer-details {
@@ -221,4 +229,8 @@ th {
 .add-crossfit {
     align-self: flex-end;
     margin-left: 10px;
+}
+
+.main-trainer-card {
+    width: 100%;
 }

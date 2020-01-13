@@ -17,7 +17,7 @@
         <a href="@Url.Action("Add", "Trainer")" class="add-crossfit btn btn-warning">Добавить</a>
     </div>
 
-    <div class="row justify-content-around">
+    <div class="row justify-content-around main-trainer-card">
         @foreach (var trainer in ViewBag.Trainer)
         {
             <div class="card col-12 col-sm-6 col-md-6 col-xl-2" style="width: 18rem;">
@@ -25,43 +25,10 @@
                 <div class="card-body">
                     <h5 class="card-title">@trainer.FirstName @trainer.SecondName</h5>
                     <p class="card-text"><b>Phone number:</b> <span class="trainer-phone">@trainer.PhoneNumber</span><br><b>Status:</b> @trainer.Status<br><b>Working time:</b> @trainer.WorkingTime</p>
-                    <a href="@Url.Action("Details", "Trainer", new { id = trainer.Id })" class="btn btn-warning">Подробнее</a>
+                    <a href="@Url.Action("Details", "Trainer", new {id = trainer.Id})" class="btn btn-warning">Подробнее</a>
                 </div>
             </div>
         }
-
-        @*<div class="card col-12 col-sm-6 col-md-6 col-xl-2" style="width: 18rem;">
-            <img src="~/Images/Trainer/t2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-warning">Расписание</a>
-            </div>
-        </div>
-        <div class="card col-12 col-sm-6 col-md-6 col-xl-2" style="width: 18rem;">
-            <img src="~/Images/Trainer/t3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-warning">Расписание</a>
-            </div>
-        </div>
-        <div class="card col-12 col-sm-6 col-md-6 col-xl-2" style="width: 18rem;">
-            <img src="~/Images/Trainer/t4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-warning">Расписание</a>
-            </div>
-        </div>
-        <div class="card col-12 col-sm-6 col-md-6 col-xl-2" style="width: 18rem;">
-            <img src="~/Images/Trainer/t5.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-warning">Расписание</a>
-            </div>
-        </div>*@
     </div>
 </div>
 

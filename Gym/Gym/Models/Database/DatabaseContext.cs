@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace Gym.Models.Database
 {
@@ -13,5 +9,6 @@ namespace Gym.Models.Database
 
         }
         public DbSet<Trainer> Trainers { get; set; }
+        public DbSet<Hall> Halls { get; set; }
     }
 }

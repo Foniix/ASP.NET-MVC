@@ -187,6 +187,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Database\DatabaseContext.cs" />
     <Compile Include="Models\Database\DatabaseInitializer.cs" />
+    <Compile Include="Models\Hall.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Trainer.cs" />
