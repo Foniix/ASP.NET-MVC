@@ -14,6 +14,7 @@
     <h2 class="tittle">НАШИ ТРЕНЕРА</h2>
     <div class="title-crossfit">
         <img src="~/Images/muscle.svg" alt="muscle" /><h3 class="sub-tittle-trainer"> Crossfit</h3><img src="~/Images/muscle (1).svg" alt="muscle" />
+        <a href="@Url.Action("Add", "Trainer")" class="add-crossfit btn btn-warning">Добавить</a>
     </div>
 
     <div class="row justify-content-around">
@@ -24,7 +25,7 @@
                 <div class="card-body">
                     <h5 class="card-title">@trainer.FirstName @trainer.SecondName</h5>
                     <p class="card-text"><b>Phone number:</b> <span class="trainer-phone">@trainer.PhoneNumber</span><br><b>Status:</b> @trainer.Status<br><b>Working time:</b> @trainer.WorkingTime</p>
-                    <a href="#" class="btn btn-warning">Подробнее</a>
+                    <a href="@Url.Action("Details", "Trainer", new { id = trainer.Id })" class="btn btn-warning">Подробнее</a>
                 </div>
             </div>
         }

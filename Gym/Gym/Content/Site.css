@@ -110,7 +110,7 @@ a {
 
 .card {
     box-shadow: 0px 0px 15px black;
-    margin: 25px;
+    margin: 15px;
 }
 
 .card img {
@@ -119,4 +119,106 @@ a {
 
 .trainer-phone {
     font-size: 14px;
+}
+
+.trainer-details {
+    margin-top: 72px;
+}
+
+.r-info {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: white;
+}
+
+.trainer-info-tittle {
+    margin-top: 10px;
+    text-align: center;
+    color: #E84B0C;
+}
+
+.l-info {
+    display: flex;
+    background-color: #E84B0C;
+    justify-content: center;
+}
+
+.trainer-info-img {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 50%;
+    align-self: center;
+}
+
+.trainer-descr {
+    color: white;
+    margin: 25px;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.trainer-descr span {
+    font-weight: 900;
+}
+
+.descr {
+    margin-bottom: 40px;
+}
+
+.trainer-details {
+    background-color: #E84B0C;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td,
+th {
+    border: 1px solid white;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+td:hover {
+    color: #E84B0C;
+    background-color: white;
+    cursor: pointer;
+}
+
+th {
+    font-weight: bold;
+    background-color: white;
+    color: #E84B0C;
+}
+
+.trainer-calendar {
+    padding: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-btn {
+    align-self: center;
+    margin-top:25px;
+}
+
+.trainer-edit {
+    align-self: flex-end;
+    margin-right: 10px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: red;
+    border-color: #dc3545;
+}
+
+.add-crossfit {
+    align-self: flex-end;
+    margin-left: 10px;
 }

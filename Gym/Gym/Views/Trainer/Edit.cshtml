@@ -1,0 +1,60 @@
+﻿@model Gym.Models.Trainer
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="@ViewBag.Trainer.Id" />
+    <div class="form-group">
+        <div class="col-sm-10">
+            <img id="img-preview" src="../@ViewBag.Trainer.Image" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputFile" class="col-sm-2 control-label">Изображение</label>
+        <div class="col-md-10">
+            <input type="file" class="form-control-file" name="file" id="inputFile" value="@ViewBag.Trainer.Image" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" name="FirstName" value="@ViewBag.Trainer.FirstName" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="LastName" value="@ViewBag.Trainer.SecondName" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="Address" value="@ViewBag.Trainer.Address" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="PhoneNumber" value="@ViewBag.Trainer.PhoneNumber" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(() => {
+            //объект для чтения изображения
+            var reader = new FileReader();
+
+            //событие, которое срабатывает при вызове функции 'readAsDataURL'
+            reader.onload = function (e) {
+                var image = e.srcElement.result;
+                $('#img-preview').attr('src', image);
+            };
+            //событие изменения input[type=file]
+            $('input[type=file]').change(function () {
+                var file = this.files[0];
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+}

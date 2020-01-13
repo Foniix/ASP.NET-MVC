@@ -6,14 +6,14 @@ using System.Data.Entity;
 
 namespace Gym.Models.Database
 {
-    public class DatabaseInitializer : CreateDatabaseIfNotExists<DatabaseContext> //DropCreateDatabaseAlways<DatabaseContext> //CreateDatabaseIfNotExists<DatabaseContext>
+    public class DatabaseInitializer : DropCreateDatabaseAlways<DatabaseContext> //DropCreateDatabaseAlways<DatabaseContext> //CreateDatabaseIfNotExists<DatabaseContext>
     {
         protected override void Seed(DatabaseContext context)
         {
             context.Trainers.AddRange(new Trainer[] {
                 new Trainer(){
                     Id = 1,
-                    Image = "../Images/Trainer/t1.jpg",
+                    Image = "/Images/Trainer/t1.jpg",
                     FirstName ="Джон",
                     SecondName ="Уик",
                     Birthday="20/05/1990",
@@ -27,7 +27,7 @@ namespace Gym.Models.Database
                 },
                 new Trainer(){
                     Id = 2,
-                    Image = "../Images/Trainer/t2.jpg",
+                    Image = "/Images/Trainer/t2.jpg",
                     FirstName ="Конор",
                     SecondName ="макгрегор",
                     Birthday="10/07/1994",
@@ -41,7 +41,7 @@ namespace Gym.Models.Database
                 },
                 new Trainer(){
                     Id = 3,
-                    Image = "../Images/Trainer/t3.jpg",
+                    Image = "/Images/Trainer/t3.jpg",
                     FirstName ="Дуэйн",
                     SecondName ="Джонсон",
                     Birthday="17/02/1972",
@@ -55,7 +55,7 @@ namespace Gym.Models.Database
                 },
                 new Trainer(){
                     Id = 4,
-                    Image = "../Images/Trainer/t4.jpg",
+                    Image = "/Images/Trainer/t4.jpg",
                     FirstName ="Просто",
                     SecondName ="Халк",
                     Birthday="10/12/1980",
@@ -69,7 +69,7 @@ namespace Gym.Models.Database
                 },
                 new Trainer(){
                     Id = 5,
-                    Image = "../Images/Trainer/t5.jpg",
+                    Image = "/Images/Trainer/t5.jpg",
                     FirstName ="Крис",
                     SecondName ="Хемсворт",
                     Birthday="11/07/1983",
