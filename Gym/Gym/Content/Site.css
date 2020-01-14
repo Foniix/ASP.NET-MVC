@@ -6,6 +6,14 @@ body {
     background-color: #e84b0c;
 }
 
+/*Edit Bootstrap style*/
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+/*End edit Bootstrap style */
+
+
 .navbar {
     background-color: #E84B0C;
     position:fixed;
@@ -256,6 +264,41 @@ th {
     color: white;
 }
 
+    .btn-link:hover {
+        color: #FF6D00;
+        text-decoration: none;
+    }
+
 .card-header {
     background-color: #e84b0c;
+}
+
+.hall-card {
+    position: relative;
+}
+
+    .hall-card .hall-descr {
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+.hall-trainer {
+    width: 50%;
+    align-self: center;
+}
+
+.hall-card .hall-img {
+    width: 100%;
+    padding: 0;
+}
+
+.hall-card .card-body {
+    padding: 0 !important;
 }

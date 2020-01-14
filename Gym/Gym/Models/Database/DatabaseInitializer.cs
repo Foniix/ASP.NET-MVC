@@ -6,6 +6,7 @@ namespace Gym.Models.Database
     {
         protected override void Seed(DatabaseContext context)
         {
+            var Lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
             context.Trainers.AddRange(new[] {
                 new Trainer(){
                     Id = 1,
@@ -82,9 +83,9 @@ namespace Gym.Models.Database
             context.Halls.AddRange(new[] {
                 new Hall(){
                     Id = 1,
-                    Image = "/Images/Trainer/t1.jpg",
-                    Name = "CrossFitHall",
-                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    Image = "/Images/CrossFitHall.jpg",
+                    Name = "Кроссфит",
+                    Descr = Lorem,
                     CounterOfClient = 20,
                     Headin = "headingOne",
                     Collapse = "collapseOne",
@@ -92,9 +93,9 @@ namespace Gym.Models.Database
                 },
                 new Hall(){
                     Id = 2,
-                    Image = "/Images/Trainer/t1.jpg",
-                    Name = "WaterHall",
-                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    Image = "/Images/Rastyjka.jpg",
+                    Name = "Растяжка",
+                    Descr = Lorem,
                     CounterOfClient = 20,
                     Headin = "headingTwo",
                     Collapse = "collapseTwo",
@@ -102,9 +103,9 @@ namespace Gym.Models.Database
                 },
                 new Hall(){
                     Id = 3,
-                    Image = "/Images/Trainer/t1.jpg",
-                    Name = "TrainingHall",
-                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    Image = "/Images/TrainingHall.jpg",
+                    Name = "Зал",
+                    Descr = Lorem,
                     CounterOfClient = 50,
                     Headin = "headingThree",
                     Collapse = "collapseThree",
@@ -112,9 +113,9 @@ namespace Gym.Models.Database
                 },
                 new Hall(){
                     Id = 4,
-                    Image = "/Images/Trainer/t1.jpg",
-                    Name = "StretchingHall",
-                    Descr = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                    Image = "/Images/WaterHall.jpg",
+                    Name = "Бассейн",
+                    Descr = Lorem,
                     CounterOfClient = 10,
                     Headin = "headingFour",
                     Collapse = "collapseFour",
