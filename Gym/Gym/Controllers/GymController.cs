@@ -16,6 +16,7 @@ namespace Gym.Controllers
         static GymController()
         {
             Database.SetInitializer(new DatabaseInitializer());
+
         }
         // GET: Gym
         public ActionResult Index()
@@ -34,9 +35,7 @@ namespace Gym.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            return View();
-        }
+        //[Authorize(Roles = "admin")]
+        
     }
 }

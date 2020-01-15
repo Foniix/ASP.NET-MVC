@@ -6,6 +6,13 @@ body {
     background-color: #e84b0c;
 }
 
+.footer {
+    background-color: #040f13;
+    width: 100%;
+    min-height: 200px;
+    box-shadow: 0 0 15px black;
+}
+
 /*Edit Bootstrap style*/
 .row {
     margin-right: 0 !important;
@@ -143,23 +150,29 @@ a {
 .r-info {
     display: flex;
     flex-direction: column-reverse;
-    background-color: white;
 }
 
     .r-info img {
-        box-shadow: 0 0 15px black;
+        box-shadow: 0 0 15px white;
     }
+
+.main-info-trainer {
+    background: url(../Images/bg-trainer-1.jpg) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px 0 20px 0;
+}
 
 .trainer-info-tittle {
     margin-top: 10px;
     text-align: center;
-    color: #E84B0C;
+    color: white;
 }
 
 .l-info {
     display: flex;
-    background-color: #E84B0C;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .trainer-info-img {
@@ -182,7 +195,7 @@ a {
 
 .descr {
     margin-bottom: 40px;
-    width: 100%
+    width: 100%;
 }
 
 .trainer-details {
@@ -252,10 +265,13 @@ th {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%
 }
 
     .accordion .card {
         width: 90%;
+        border: 0 !important;
+        border-block-end: solid 5px white !important;
     }
 
 .btn-link {
@@ -302,3 +318,4 @@ th {
 .hall-card .card-body {
     padding: 0 !important;
 }
+

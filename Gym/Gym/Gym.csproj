@@ -184,9 +184,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001150739369_InitialCreate.cs" />
+    <Compile Include="Migrations\202001150739369_InitialCreate.designer.cs">
+      <DependentUpon>202001150739369_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001150753215_DataMigration.cs" />
+    <Compile Include="Migrations\202001150753215_DataMigration.designer.cs">
+      <DependentUpon>202001150753215_DataMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Database\DatabaseContext.cs" />
     <Compile Include="Models\Database\DatabaseInitializer.cs" />
+    <Compile Include="Models\Database\RoleInitializer.cs" />
     <Compile Include="Models\Hall.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -355,7 +365,6 @@
     <Content Include="Views\Gym\Index.cshtml" />
     <Content Include="Views\Gym\Halls.cshtml" />
     <Content Include="Views\Trainer\Index.cshtml" />
-    <Content Include="Views\Gym\Contact.cshtml" />
     <Content Include="Views\Trainer\Details.cshtml" />
     <Content Include="Views\Trainer\Edit.cshtml" />
     <Content Include="Views\Trainer\Add.cshtml" />
@@ -374,6 +383,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001150739369_InitialCreate.resx">
+      <DependentUpon>202001150739369_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001150753215_DataMigration.resx">
+      <DependentUpon>202001150753215_DataMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -20,9 +20,15 @@
                 <a class="nav-item nav-link" href="@Url.Action("Index", "Gym")">Главная</a>
                 <a class="nav-item nav-link" href="@Url.Action("Halls", "Gym")">Залы</a>
                 <a class="nav-item nav-link" href="@Url.Action("Index", "Trainer")">Тренера</a>
-                <a class="nav-item nav-link" href="@Url.Action("Contact", "Gym")">Контакты</a>
+                @if (ViewContext.HttpContext.User.IsInRole("admin"))
+                {
+                    <a class="nav-item nav-link" href="@Url.Action("Admin", "Gym")">Админка</a>
+                }
+                @if (ViewContext.HttpContext.User.IsInRole("trainer"))
+                {
+                    <a class="nav-item nav-link" href="@Url.Action("Admin", "Gym")">Тренерская</a>
+                }
 
-                
             </div>
             <div class="navbar-nav col-2">
                 @Html.Partial("_LoginPartial")
@@ -30,7 +36,12 @@
         </div>
     </nav>
     @RenderBody()
-    
+
+<footer>
+    <div class="footer">
+
+    </div>
+</footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

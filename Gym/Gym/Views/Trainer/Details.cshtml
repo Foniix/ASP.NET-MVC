@@ -3,34 +3,41 @@
 @{
     ViewBag.Title = "Details";
 }
-<div class="trainer-details">
-     <div class="descr row justify-content-between">
-        <div class="r-info col-12 col-sm-12 col-md-6 col-xl-6">
-            <img src="@ViewBag.Trainer.Image" class="trainer-info-img" alt="@ViewBag.Trainer.FirstName @ViewBag.Trainer.SecondName" />
-            <h2 class="trainer-info-tittle">@ViewBag.Trainer.FirstName @ViewBag.Trainer.SecondName</h2>
-        </div>
 
-        <div class="l-info col-12 col-sm-12 col-md-6 col-xl-6">
-            <div class="trainer-descr">
-                <span>Год рождения: </span>@ViewBag.Trainer.Birthday<br>
-                <span>Номер телефона: </span>@ViewBag.Trainer.PhoneNumber<br>
-                <span>E-mail: </span>@ViewBag.Trainer.Email<br>
-                <span>Адрес: </span>@ViewBag.Trainer.Address<br>
-                <span>Пол: </span>@ViewBag.Trainer.Gender<br>
-                <span>Статус: </span>@ViewBag.Trainer.Status<br>
-                <span>Направление: </span>@ViewBag.Trainer.Specialization<br>
-                <span>Рабочее время: </span>@ViewBag.Trainer.WorkingTime
+    <div class="trainer-details">
+        <div class="main-info-trainer">
+            <div class="container">
+                <div class="descr row justify-content-between">
+                    <div class="r-info col-12 col-sm-12 col-md-6 col-xl-6">
+                        <img src="@ViewBag.Trainer.Image" class="trainer-info-img" alt="@ViewBag.Trainer.FirstName @ViewBag.Trainer.SecondName" />
+                        <h2 class="trainer-info-tittle">@ViewBag.Trainer.FirstName @ViewBag.Trainer.SecondName</h2>
+                    </div>
+
+                    <div class="l-info col-12 col-sm-12 col-md-6 col-xl-6">
+                        <div class="trainer-descr">
+                            <span>Год рождения: </span>@ViewBag.Trainer.Birthday<br>
+                            <span>Номер телефона: </span>@ViewBag.Trainer.PhoneNumber<br>
+                            <span>E-mail: </span>@ViewBag.Trainer.Email<br>
+                            <span>Адрес: </span>@ViewBag.Trainer.Address<br>
+                            <span>Пол: </span>@ViewBag.Trainer.Gender<br>
+                            <span>Статус: </span>@ViewBag.Trainer.Status<br>
+                            <span>Направление: </span>@ViewBag.Trainer.Specialization<br>
+                            <span>Рабочее время: </span>@ViewBag.Trainer.WorkingTime
+                        </div>
+                        <div class="trainer-descr-btn">
+                            <a href="@Url.Action("Edit", "Trainer", new {id = @ViewBag.Trainer.Id})" class="trainer-edit btn btn-warning">Редактировать</a>
+                            <a href="@Url.Action("Delete", "Trainer", new {id = @ViewBag.Trainer.Id})" class="trainer-edit btn btn-danger">Удалить</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="@Url.Action("Edit", "Trainer",new { id = @ViewBag.Trainer.Id })" class="trainer-edit btn btn-warning">Редактировать</a>
-            <a href="@Url.Action("Delete", "Trainer",new { id = @ViewBag.Trainer.Id })" class="trainer-edit btn btn-danger">Удалить</a>
         </div>
-     </div>
-     <div class="trainer-calendar col-12">
-         <div id="calendar"></div>
-         <a href="#" class="calendar-btn btn btn-warning">Записаться</a>
-     </div>
-     
-</div>
+        <div class="trainer-calendar col-12">
+            <div id="calendar"></div>
+            <a href="#" class="calendar-btn btn btn-warning">Записаться</a>
+        </div>
+    </div>
+
 
 @section scripts {
     <script>
